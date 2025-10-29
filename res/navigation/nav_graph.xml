@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.animeverse.ui.HomeFragment"
+        android:label="Início">
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/animesFragment"
+        android:name="com.example.animeverse.ui.AnimesFragment"
+        android:label="Animes" />
+
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.example.animeverse.ui.CharactersFragment"
+        android:label="Personagens" />
+
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.example.animeverse.ui.EpisodesFragment"
+        android:label="Episódios" />
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.animeverse.ui.DetailsFragment"
+        android:label="Detalhes">
+        <argument
+            android:name="animeName"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
